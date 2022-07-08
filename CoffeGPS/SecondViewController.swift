@@ -42,7 +42,11 @@ extension SecondViewController: UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        //let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
+        
+        
         let cafe = cafeterias[indexPath.row]
         cell.textLabel?.text = cafe.nombre.capitalized
         cell.detailTextLabel?.text = String(cafe.distancia) + " km"
@@ -50,6 +54,11 @@ extension SecondViewController: UITableViewDataSource, UITableViewDelegate{
     
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
     }
     /*
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

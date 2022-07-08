@@ -11,6 +11,7 @@
 		655988F02877D2A3000D3C0F /* LocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655988EF2877D2A3000D3C0F /* LocalRepository.swift */; };
 		655988F22877D3ED000D3C0F /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655988F12877D3ED000D3C0F /* Response.swift */; };
 		655988F42877D4D3000D3C0F /* GetMyLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655988F32877D4D3000D3C0F /* GetMyLocation.swift */; };
+		655988F72877E438000D3C0F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655988F62877E438000D3C0F /* MapViewController.swift */; };
 		658335B3286807A900B14292 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658335B2286807A900B14292 /* AppDelegate.swift */; };
 		658335B5286807A900B14292 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658335B4286807A900B14292 /* SceneDelegate.swift */; };
 		658335B7286807A900B14292 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658335B6286807A900B14292 /* ViewController.swift */; };
@@ -26,6 +27,7 @@
 		655988F12877D3ED000D3C0F /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		655988F32877D4D3000D3C0F /* GetMyLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMyLocation.swift; sourceTree = "<group>"; };
 		655988F52877D870000D3C0F /* Cafeterias.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Cafeterias.json; sourceTree = "<group>"; };
+		655988F62877E438000D3C0F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		658335AF286807A900B14292 /* CoffeGPS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeGPS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		658335B2286807A900B14292 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		658335B4286807A900B14292 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				658335BB286807AA00B14292 /* Assets.xcassets */,
 				658335BD286807AA00B14292 /* LaunchScreen.storyboard */,
 				658335C0286807AA00B14292 /* Info.plist */,
+				655988F62877E438000D3C0F /* MapViewController.swift */,
 				658335B6286807A900B14292 /* ViewController.swift */,
 				658335C62868D29300B14292 /* SecondViewController.swift */,
 				655988ED2877CD96000D3C0F /* CafeteriasLocalesStruct.swift */,
@@ -159,6 +162,7 @@
 				658335C72868D29300B14292 /* SecondViewController.swift in Sources */,
 				655988F02877D2A3000D3C0F /* LocalRepository.swift in Sources */,
 				658335B7286807A900B14292 /* ViewController.swift in Sources */,
+				655988F72877E438000D3C0F /* MapViewController.swift in Sources */,
 				655988F42877D4D3000D3C0F /* GetMyLocation.swift in Sources */,
 				655988EE2877CD96000D3C0F /* CafeteriasLocalesStruct.swift in Sources */,
 				658335B3286807A900B14292 /* AppDelegate.swift in Sources */,
