@@ -9,9 +9,7 @@ import UIKit
 
 class SecondViewController: UIViewController {
     
-    
-    @IBOutlet var tableView: UITableView!
-    
+    @IBOutlet weak var tableView: UITableView!
     var cafeterias: [CafeteriasLocalesStruct] = []
 //    let locales = [
 //        Local(nombre: "Local 1", direccion: "Calle independencia 278"),
@@ -43,17 +41,31 @@ extension SecondViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "customTableViewCell", for: indexPath) as? CustomTableViewCell
         //let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
         
         
         let cafe = cafeterias[indexPath.row]
-        cell.textLabel?.text = cafe.nombre.capitalized
-        cell.detailTextLabel?.text = String(cafe.distancia) + " km"
+        print("cafeterias \(cafeterias)")
+        cell?.nameLocalCell?.text = cafe.nombre.capitalized
+        cell?.descriptioncell?.text = String(cafe.distancia) + " km"
+        cell?.estrellasCell?.text = String(cafe.estrellas)
         
+        if let url = URL(string: cafe.url) {
+            let task = URLSession.shared.dataTask(with: url) { data, response, error in guard let data = data, error == nil else { return }
+                
+                DispatchQueue.main.async { /// execute on main threadself.imageView.image = UIImage(data: da
+                    cell?.imageCell?.image = UIImage(data: data)
+                }
+            }
+            
+            task.resume()
+        }
+        
+        cell?.imageCell?.image = UIImage()
     
         
-        return cell
+        return cell!
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -74,3 +86,5 @@ extension SecondViewController: UITableViewDataSource, UITableViewDelegate{
      */
     
 }
+
+
