@@ -38,18 +38,20 @@ class ViewController: UIViewController {
     }
     
     @IBAction func didTapbutton(){
-        LocalRepository().getCafeterias { cafeterias in
-            
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
-            //Llamamos a LocalRepository
-            vc.cafeterias = cafeterias.sorted{ (a, b) -> Bool in
-                return a.distancia < b.distancia
+        
+            LocalRepository().getCafeterias { cafeterias in
                 
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
+            
+                //Llamamos a LocalRepository
+                vc.cafeterias = cafeterias.sorted{ (a, b) -> Bool in
+                    return a.distancia < b.distancia
+                    
+                }
+                    self.show(vc, sender: nil)
             }
-                self.show(vc, sender: nil)
         }
-     
+        
+        
     }
-    
-}

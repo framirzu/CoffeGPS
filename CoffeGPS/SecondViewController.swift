@@ -21,6 +21,7 @@ class SecondViewController: UIViewController {
 //
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate=self
         tableView.dataSource = self
         
         // Do any additional setup after loading the view.
@@ -28,8 +29,29 @@ class SecondViewController: UIViewController {
 
 }
 
-extension SecondViewController: UITableViewDataSource, UITableViewDelegate {
+extension SecondViewController: UITableViewDataSource, UITableViewDelegate{
     
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int)->
+    String?{
+        
+        cafeterias.first?.nombre
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return cafeterias.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
+        let cafe = cafeterias[indexPath.row]
+        cell.textLabel?.text = cafe.nombre.capitalized
+        cell.detailTextLabel?.text = String(cafe.distancia) + " km"
+        
+    
+        
+        return cell
+    }
+    /*
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        return locales.count
     }
@@ -40,5 +62,6 @@ extension SecondViewController: UITableViewDataSource, UITableViewDelegate {
         cell.textLabel?.text = local.nombre
         cell.detailTextLabel?.text = local.direccion
         return cell
-    }
+     */
+    
 }
