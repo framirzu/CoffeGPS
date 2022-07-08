@@ -48,8 +48,11 @@ extension SecondViewController: UITableViewDataSource, UITableViewDelegate{
         let cafe = cafeterias[indexPath.row]
         print("cafeterias \(cafeterias)")
         cell?.nameLocalCell?.text = cafe.nombre.capitalized
-        cell?.descriptioncell?.text = String(cafe.distancia) + " km"
-        cell?.estrellasCell?.text = String(cafe.estrellas)
+        
+        cell?.descriptioncell?.text = "Distania: " + String(format : "%0.2f", cafe.distancia) + " km"
+        
+        //cell?.descriptioncell?.text = "Distania: " + String(cafe.distancia) + " km"
+        cell?.estrellasCell?.text = "Valoracion: " + String(cafe.estrellas)
         
         if let url = URL(string: cafe.url) {
             let task = URLSession.shared.dataTask(with: url) { data, response, error in guard let data = data, error == nil else { return }
