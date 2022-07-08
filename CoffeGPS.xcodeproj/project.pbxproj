@@ -62,13 +62,13 @@
 			children = (
 				658335B2286807A900B14292 /* AppDelegate.swift */,
 				658335B4286807A900B14292 /* SceneDelegate.swift */,
-				658335B6286807A900B14292 /* ViewController.swift */,
-				658335C62868D29300B14292 /* SecondViewController.swift */,
 				658335B8286807A900B14292 /* Main.storyboard */,
 				658335BB286807AA00B14292 /* Assets.xcassets */,
 				658335BD286807AA00B14292 /* LaunchScreen.storyboard */,
 				658335C0286807AA00B14292 /* Info.plist */,
 				658335C8286929E400B14292 /* Local.swift */,
+				658335B6286807A900B14292 /* ViewController.swift */,
+				658335C62868D29300B14292 /* SecondViewController.swift */,
 			);
 			path = CoffeGPS;
 			sourceTree = "<group>";

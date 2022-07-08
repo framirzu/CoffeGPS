@@ -12,12 +12,13 @@ class SecondViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
     
-    let locales = [
-        Local(nombre: "Local 1", direccion: "Calle independencia 278"),
-        Local(nombre: "Local 2", direccion: "Calle Tacna 980"),
-        Local(nombre: "Local 3", direccion: "AV.GIANLUCA")
-    ]
-    
+//    
+//    let locales = [
+//        Local(nombre: "Local 1", direccion: "Calle independencia 278"),
+//        Local(nombre: "Local 2", direccion: "Calle Tacna 980"),
+//        Local(nombre: "Local 3", direccion: "AV.GIANLUCA")
+//    ]
+//    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
