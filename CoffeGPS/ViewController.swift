@@ -27,6 +27,7 @@ class ViewController: UIViewController {
     @IBAction func switchDidChange(_ sender: UISwitch) {
         
         if sender.isOn {
+            LocationManager.shared.getLocation()
             labelGPS.text = "GPS Activado";
             buscarButton.isEnabled = true
         }else{
@@ -37,12 +38,18 @@ class ViewController: UIViewController {
     }
     
     @IBAction func didTapbutton(){
+        LocalRepository().getCafeterias { cafeterias in
+            
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "list_vc") 
-         show(vc, sender: nil)
-        
-    }
+        let vc = storyboard.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
+            //Llamamos a LocalRepository
+            vc.cafeterias = cafeterias.sorted{ (a, b) -> Bool in
+                return a.distancia < b.distancia
+                
+            }
+                self.show(vc, sender: nil)
+        }
      
-    
+    }
     
 }

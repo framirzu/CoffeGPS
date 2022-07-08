@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		655988EE2877CD96000D3C0F /* CafeteriasLocalesStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655988ED2877CD96000D3C0F /* CafeteriasLocalesStruct.swift */; };
+		655988F02877D2A3000D3C0F /* LocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655988EF2877D2A3000D3C0F /* LocalRepository.swift */; };
 		658335B3286807A900B14292 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658335B2286807A900B14292 /* AppDelegate.swift */; };
 		658335B5286807A900B14292 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658335B4286807A900B14292 /* SceneDelegate.swift */; };
 		658335B7286807A900B14292 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658335B6286807A900B14292 /* ViewController.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		655988ED2877CD96000D3C0F /* CafeteriasLocalesStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeteriasLocalesStruct.swift; sourceTree = "<group>"; };
+		655988EF2877D2A3000D3C0F /* LocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRepository.swift; sourceTree = "<group>"; };
 		658335AF286807A900B14292 /* CoffeGPS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeGPS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		658335B2286807A900B14292 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		658335B4286807A900B14292 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +73,8 @@
 				658335C8286929E400B14292 /* Local.swift */,
 				658335B6286807A900B14292 /* ViewController.swift */,
 				658335C62868D29300B14292 /* SecondViewController.swift */,
+				655988ED2877CD96000D3C0F /* CafeteriasLocalesStruct.swift */,
+				655988EF2877D2A3000D3C0F /* LocalRepository.swift */,
 			);
 			path = CoffeGPS;
 			sourceTree = "<group>";
@@ -146,7 +152,9 @@
 			files = (
 				658335C9286929E400B14292 /* Local.swift in Sources */,
 				658335C72868D29300B14292 /* SecondViewController.swift in Sources */,
+				655988F02877D2A3000D3C0F /* LocalRepository.swift in Sources */,
 				658335B7286807A900B14292 /* ViewController.swift in Sources */,
+				655988EE2877CD96000D3C0F /* CafeteriasLocalesStruct.swift in Sources */,
 				658335B3286807A900B14292 /* AppDelegate.swift in Sources */,
 				658335B5286807A900B14292 /* SceneDelegate.swift in Sources */,
 			);
