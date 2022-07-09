@@ -4,9 +4,6 @@
 //
 //  Created by Franzua Renzo Ramirez Gaston Zuloeta on 7/07/22.
 //
-
-import UIKit
-
 import CoreLocation
 import MapKit
 import UIKit
@@ -29,7 +26,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
     }
-    //esta funcion es llamada cuando el manager location es uopdatre
+    //esta funcion es llamada cuando el manager location es uopdate
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first {
             manager.stopUpdatingLocation()
@@ -37,6 +34,20 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
             render (location: location)
         }
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     func    render( location: CLLocation) {
         
         let coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude,

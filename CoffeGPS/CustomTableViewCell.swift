@@ -11,22 +11,10 @@ class CustomTableViewCell: UITableViewCell {
     
     
     @IBOutlet weak var imageCell: UIImageView!
-    
     @IBOutlet weak var nameLocalCell: UILabel!
     @IBOutlet weak var descriptioncell: UILabel!
     @IBOutlet weak var estrellasCell: UILabel!
-    //    @IBOutlet weak var imageCell: UIImageView!
-//
-//    @IBOutlet weak var nameLocalCell: UILabel!
-//
-//    @IBOutlet weak var descriptioncell: UILabel!
-//
-//
-//    @IBOutlet weak var estrellasCell: UILabel!
-//
-//    @IBOutlet var tableView: UITableView!
-
-    
+    @IBOutlet weak var direccionesCell: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

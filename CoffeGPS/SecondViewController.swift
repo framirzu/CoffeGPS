@@ -50,9 +50,8 @@ extension SecondViewController: UITableViewDataSource, UITableViewDelegate{
         cell?.nameLocalCell?.text = cafe.nombre.capitalized
         
         cell?.descriptioncell?.text = "Distania: " + String(format : "%0.2f", cafe.distancia) + " km"
-        
-        //cell?.descriptioncell?.text = "Distania: " + String(cafe.distancia) + " km"
-        cell?.estrellasCell?.text = "Valoracion: " + String(cafe.estrellas)
+        cell?.estrellasCell?.text = "Valoracion: " + String(cafe.estrellas) + "⭐️"
+        cell?.direccionesCell?.text = "Ubicación: " + String(cafe.direccion)
         
         if let url = URL(string: cafe.url) {
             let task = URLSession.shared.dataTask(with: url) { data, response, error in guard let data = data, error == nil else { return }
