@@ -23,6 +23,7 @@ struct CafeteriasLocalesStruct:Codable {
         let selfLocation = CLLocation(latitude: mylatitude, longitude: mylongitud)
         // Coordenas de latitud y longitud del local transformadas a a objeto CLLocation
         let location = CLLocation(latitude: latitude, longitude:longitude)
+        //
         let distancia = selfLocation.distance(from: location)/1000
         
         return distancia

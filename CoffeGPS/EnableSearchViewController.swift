@@ -7,20 +7,20 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class EnableSearchViewController: UIViewController {
     
-    @IBOutlet var mySwitch: UISwitch!
+    @IBOutlet var gpsSwitch: UISwitch!
     
     @IBOutlet var labelGPS: UILabel!
 
-    @IBOutlet var buscarButton: UIButton!
+    @IBOutlet var startToSearchButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if mySwitch.isOn {
-            buscarButton.isEnabled = true
+        if gpsSwitch.isOn {
+            startToSearchButton.isEnabled = true
         } else {
-            buscarButton.isEnabled = false
+            startToSearchButton.isEnabled = false
         }
         // Do any additional setup after loading the view.
     }
@@ -29,11 +29,11 @@ class ViewController: UIViewController {
         if sender.isOn {
             LocationManager.shared.getLocation()
             labelGPS.text = "GPS Activado";
-            buscarButton.isEnabled = true
+            startToSearchButton.isEnabled = true
         }else{
 
             labelGPS.text = "GPS Desactivado"
-            buscarButton.isEnabled = false
+            startToSearchButton.isEnabled = false
         }
     }
     

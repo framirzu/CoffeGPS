@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Enable Search View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoffeGPS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="EnableSearchViewController" customModule="CoffeGPS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,9 +67,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="f4o-xd-oRw"/>
                     <connections>
-                        <outlet property="buscarButton" destination="Cjg-zc-OyR" id="E8p-z1-wL5"/>
+                        <outlet property="gpsSwitch" destination="xUf-0b-80f" id="zWA-3U-bTi"/>
                         <outlet property="labelGPS" destination="fKY-hP-cNy" id="CGq-Ke-XUY"/>
-                        <outlet property="mySwitch" destination="xUf-0b-80f" id="zWA-3U-bTi"/>
+                        <outlet property="startToSearchButton" destination="Cjg-zc-OyR" id="E8p-z1-wL5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -132,13 +132,13 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyw-XX-Eoa">
-                                                    <rect key="frame" x="160" y="152" width="224" height="71"/>
+                                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyw-XX-Eoa">
+                                                    <rect key="frame" x="160" y="164" width="234" height="59"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="Syi-nd-Mwn"/>
                                                         <constraint firstAttribute="width" constant="224" id="jME-u4-Eno"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -165,7 +165,6 @@
                                             <outlet property="estrellasCell" destination="RoI-VW-jQF" id="lpf-fB-F81"/>
                                             <outlet property="imageCell" destination="GfG-ug-Qaw" id="Q2Z-uk-xs5"/>
                                             <outlet property="nameLocalCell" destination="xTT-CU-7kN" id="aIL-b2-B6B"/>
-                                            <segue destination="qPk-Qr-ydh" kind="show" id="Vmg-oa-jvs"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -182,7 +181,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="5Ik-fM-K7m"/>
                     <connections>
-                        <outlet property="tableView" destination="eiH-Y7-ddO" id="8dj-a2-DEU"/>
+                        <outlet property="tableView" destination="eiH-Y7-ddO" id="Jhi-6S-KqS"/>
+                        <segue destination="qPk-Qr-ydh" kind="show" identifier="showmecoordenates" id="7w0-j8-Jxs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7GW-Ps-c5S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -200,6 +200,13 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="naP-Ka-2DI">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                             </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLN-OR-aQm">
+                                <rect key="frame" x="123" y="0.0" width="177" height="105"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UGF-L7-l1i"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -210,16 +217,20 @@
                             <constraint firstItem="UGF-L7-l1i" firstAttribute="trailing" secondItem="naP-Ka-2DI" secondAttribute="trailing" id="NlA-aJ-rNz"/>
                             <constraint firstItem="naP-Ka-2DI" firstAttribute="leading" secondItem="UGF-L7-l1i" secondAttribute="leading" id="R44-jw-B2U"/>
                             <constraint firstItem="UGF-L7-l1i" firstAttribute="bottom" secondItem="naP-Ka-2DI" secondAttribute="bottom" id="X92-MB-Oml"/>
+                            <constraint firstItem="naP-Ka-2DI" firstAttribute="trailing" secondItem="UGF-L7-l1i" secondAttribute="trailing" id="ejw-Em-n9O"/>
+                            <constraint firstItem="naP-Ka-2DI" firstAttribute="leading" secondItem="UGF-L7-l1i" secondAttribute="leading" id="ntg-5C-Wxn"/>
+                            <constraint firstItem="UGF-L7-l1i" firstAttribute="bottom" secondItem="naP-Ka-2DI" secondAttribute="bottom" id="wHM-CG-cCg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nzh-EW-o9W"/>
                     <connections>
                         <outlet property="mapView" destination="naP-Ka-2DI" id="ArL-yX-hX9"/>
+                        <outlet property="tableView" destination="JLN-OR-aQm" id="XAw-Pa-H9U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BhC-fU-t5F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2688" y="57"/>
+            <point key="canvasLocation" x="2686.9565217391305" y="56.919642857142854"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="O5C-K4-6sJ">

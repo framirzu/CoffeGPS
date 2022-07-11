@@ -76,9 +76,7 @@ class LocalRepository{
                 print(error)
             }
         }.resume()
-    
     }
-    
     func loadJSONfile(_ name: String) -> Data? { // Da la ruta donde esta el archivo JSON Cafeterias
         
         //Data

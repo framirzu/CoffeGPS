@@ -10,9 +10,9 @@ import UIKit
 
 class MapViewController: UIViewController, CLLocationManagerDelegate  {
 
+    
+    @IBOutlet weak var tableView: UILabel!
 
-    
-    
     var locales: CafeteriasLocalesStruct?
     
     
@@ -20,10 +20,15 @@ class MapViewController: UIViewController, CLLocationManagerDelegate  {
     
     let manager = CLLocationManager()
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        tableView.text = "\((locales?.latitude)!)  comes under the category \((locales?.longitude)!) "
+        
+        print(tableView.text)
+        
+        
         // Do any additional setup after loading the view.
     }
     

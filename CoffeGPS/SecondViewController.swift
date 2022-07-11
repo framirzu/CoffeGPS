@@ -10,10 +10,12 @@ import UIKit
 class SecondViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    
     var cafeterias: [CafeteriasLocalesStruct] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.delegate=self
         tableView.dataSource = self
         
@@ -39,18 +41,13 @@ extension SecondViewController: UITableViewDataSource, UITableViewDelegate{
         let cell = tableView.dequeueReusableCell(withIdentifier: "customTableViewCell", for: indexPath) as? CustomTableViewCell
         
         //let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
-        
-        
         let cafe = cafeterias[indexPath.row]
         print("cafeterias \(cafeterias)")
         cell?.nameLocalCell?.text = cafe.nombre.capitalized
         
         cell?.descriptioncell?.text = "Distania: " + String(format : "%0.2f", cafe.distancia) + " km"
         cell?.estrellasCell?.text = "Valoracion: " + String(cafe.estrellas) + "⭐️"
-        cell?.direccionesCell?.text = "Ubicación: " + String(cafe.direccion)
-        
-        
-        
+        cell?.direccionesCell?.text = "Ubicación: " + cafe.direccion
         
         
         if let url = URL(string: cafe.url) {
@@ -66,15 +63,25 @@ extension SecondViewController: UITableViewDataSource, UITableViewDelegate{
         
         cell?.imageCell?.image = UIImage()
     
-        
         return cell!
     }
-    
+//    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
         
+        //tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "showmecoordenates", sender: self)
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? MapViewController {
+            destination.locales = cafeterias[(tableView.indexPathForSelectedRow?.row)!]
+        
+        }
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
     
 }
 
