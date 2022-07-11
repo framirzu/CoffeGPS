@@ -76,10 +76,10 @@
             </objects>
             <point key="canvasLocation" x="934.78260869565224" y="56.919642857142854"/>
         </scene>
-        <!--Second View Controller-->
+        <!--List Cafeterias View Controller-->
         <scene sceneID="Iqf-jF-cJq">
             <objects>
-                <viewController storyboardIdentifier="SecondViewController" id="xXe-wZ-U8Y" customClass="SecondViewController" customModule="CoffeGPS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondViewController" id="xXe-wZ-U8Y" customClass="ListCafeteriasViewController" customModule="CoffeGPS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o16-J7-Nc6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

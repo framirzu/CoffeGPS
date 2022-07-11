@@ -16,7 +16,6 @@ class LocalRepository{
     //func getCafeterias(){
     func getCafeterias(block: @escaping ([CafeteriasLocalesStruct]) -> Void) {
         
-  
         // de la linea 22 hasta la 24 es para conectarte al json
         guard let url = URL(string:"https://mocki.io/v1/668549df-8e4c-48ae-9664-ab24714f66b8" ) else {return}
         URLSession.shared.dataTask(with:url){(data,response,error) in

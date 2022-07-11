@@ -42,7 +42,7 @@ class EnableSearchViewController: UIViewController {
             LocalRepository().getCafeterias { cafeterias in
                 
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let vc = storyboard.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
+                let vc = storyboard.instantiateViewController(withIdentifier: "SecondViewController") as! ListCafeteriasViewController
             
                 //Llamamos a LocalRepository
                 vc.cafeterias = cafeterias.sorted{ (a, b) -> Bool in

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class ListCafeteriasViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -24,7 +24,7 @@ class SecondViewController: UIViewController {
 
 }
 
-extension SecondViewController: UITableViewDataSource, UITableViewDelegate{
+extension ListCafeteriasViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int)->
     String?{

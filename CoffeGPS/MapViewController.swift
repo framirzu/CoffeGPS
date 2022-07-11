@@ -23,11 +23,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate  {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         tableView.text = "\((locales?.latitude)!)  comes under the category \((locales?.longitude)!) "
         
-        print(tableView.text)
-        
+        // Imprime en la consola la latitud y longitud del local seleccionado
+        // en la celda de LisCafeteriasViewController
+        print(((locales?.latitude)!) )
+        print(((locales?.longitude)!) )
         
         // Do any additional setup after loading the view.
     }
@@ -40,7 +41,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate  {
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
     }
-    //esta funcion es llamada cuando el manager location es uopdatre
+    //esta funcion es llamada cuando el manager location es uopdate
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         if let location = locations.first {
@@ -53,12 +54,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate  {
     }
     func    render( location: CLLocation) {
         
-        let coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude,
-                                                        longitude: location.coordinate.longitude)
+//        let coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude,
+//                                                        longitude: location.coordinate.longitude)
                 
         
-//        let coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude,
-//                                                longitude: location.coordinate.longitude)
+        let coordinate = CLLocationCoordinate2D(latitude: ((locales?.latitude)!),
+                                                longitude: ((locales?.longitude)!))
         
         let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
         

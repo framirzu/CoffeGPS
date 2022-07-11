@@ -37,7 +37,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate{
 
             location = locations.first?.coordinate
 
-            print("localizacion actual \(location)")
+        print("localizacion actual \(String(describing: location))")
 
         }
     
