@@ -4,7 +4,7 @@
 //
 //  Created by Franzua Renzo Ramirez Gaston Zuloeta on 26/06/22.
 //
-
+//
 import UIKit
 
 class ListCafeteriasViewController: UIViewController {
@@ -15,7 +15,7 @@ class ListCafeteriasViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //
         tableView.delegate=self
         tableView.dataSource = self
         
@@ -40,14 +40,15 @@ extension ListCafeteriasViewController: UITableViewDataSource, UITableViewDelega
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "customTableViewCell", for: indexPath) as? CustomTableViewCell
         
-        //let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
+    
         let cafe = cafeterias[indexPath.row]
         print("cafeterias \(cafeterias)")
-        cell?.nameLocalCell?.text = cafe.nombre.capitalized
         
-        cell?.descriptioncell?.text = "Distania: " + String(format : "%0.2f", cafe.distancia) + " km"
+        
+        cell?.nameLocalCell?.text = cafe.nombre.capitalized
+        cell?.descriptioncell?.text = "Distancia " + String(format : "%0.2f", cafe.distancia) + " km"
         cell?.estrellasCell?.text = "Valoracion: " + String(cafe.estrellas) + "⭐️"
-        cell?.direccionesCell?.text = "Ubicación: " + cafe.direccion
+        cell?.direccionesCell?.text = "📌:" + cafe.direccion
         
         
         if let url = URL(string: cafe.url) {

@@ -20,5 +20,113 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2A5FDF08-9684-4C37-A2F9-2D756017ABC4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoffeGPS/ListCafeteriasViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "ListCafeteriasViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "2A5FDF08-9684-4C37-A2F9-2D756017ABC4 - f2253e85fe88a579"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CoffeGPS.ListCafeteriasViewController.cafeterias.getter : Swift.Array&lt;CoffeGPS.CafeteriasLocalesStruct&gt;"
+                  moduleName = "CoffeGPS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/framirzu/Desktop/CoffeGPS-master/CoffeGPS/ListCafeteriasViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "2A5FDF08-9684-4C37-A2F9-2D756017ABC4 - 63174f1a11401385"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CoffeGPS.ListCafeteriasViewController.cafeterias.setter : Swift.Array&lt;CoffeGPS.CafeteriasLocalesStruct&gt;"
+                  moduleName = "CoffeGPS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/framirzu/Desktop/CoffeGPS-master/CoffeGPS/ListCafeteriasViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "2A5FDF08-9684-4C37-A2F9-2D756017ABC4 - 80c0f2768d19a92a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CoffeGPS.ListCafeteriasViewController.cafeterias.modify : Swift.Array&lt;CoffeGPS.CafeteriasLocalesStruct&gt;"
+                  moduleName = "CoffeGPS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/framirzu/Desktop/CoffeGPS-master/CoffeGPS/ListCafeteriasViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "2A5FDF08-9684-4C37-A2F9-2D756017ABC4 - e9da8b26a1d29427"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CoffeGPS.ListCafeteriasViewController.cafeterias.modify : Swift.Array&lt;CoffeGPS.CafeteriasLocalesStruct&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "CoffeGPS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/framirzu/Desktop/CoffeGPS-master/CoffeGPS/ListCafeteriasViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "2A5FDF08-9684-4C37-A2F9-2D756017ABC4 - 5d47cc5581670d19"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CoffeGPS.ListCafeteriasViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; CoffeGPS.ListCafeteriasViewController"
+                  moduleName = "CoffeGPS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/framirzu/Desktop/CoffeGPS-master/CoffeGPS/ListCafeteriasViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "120">
+               </Location>
+               <Location
+                  uuid = "2A5FDF08-9684-4C37-A2F9-2D756017ABC4 - 3c796b7ad04f966e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CoffeGPS.ListCafeteriasViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;CoffeGPS.ListCafeteriasViewController&gt;"
+                  moduleName = "CoffeGPS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/framirzu/Desktop/CoffeGPS-master/CoffeGPS/ListCafeteriasViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "96">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

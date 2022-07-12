@@ -31,8 +31,6 @@ class LocationManager: NSObject, CLLocationManagerDelegate{
         
     }
     
-    
-    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
 
             location = locations.first?.coordinate

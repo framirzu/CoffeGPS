@@ -7,20 +7,20 @@
 
 import UIKit
 
-class EnableSearchViewController: UIViewController {
+class ViewController: UIViewController {
     
-    @IBOutlet var gpsSwitch: UISwitch!
+    @IBOutlet var mySwitch: UISwitch!
     
     @IBOutlet var labelGPS: UILabel!
 
-    @IBOutlet var startToSearchButton: UIButton!
+    @IBOutlet var buscarButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if gpsSwitch.isOn {
-            startToSearchButton.isEnabled = true
+        if mySwitch.isOn {
+            buscarButton.isEnabled = true
         } else {
-            startToSearchButton.isEnabled = false
+            buscarButton.isEnabled = false
         }
         // Do any additional setup after loading the view.
     }
@@ -29,11 +29,11 @@ class EnableSearchViewController: UIViewController {
         if sender.isOn {
             LocationManager.shared.getLocation()
             labelGPS.text = "GPS Activado";
-            startToSearchButton.isEnabled = true
+            buscarButton.isEnabled = true
         }else{
 
             labelGPS.text = "GPS Desactivado"
-            startToSearchButton.isEnabled = false
+            buscarButton.isEnabled = false
         }
     }
     
@@ -42,7 +42,7 @@ class EnableSearchViewController: UIViewController {
             LocalRepository().getCafeterias { cafeterias in
                 
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let vc = storyboard.instantiateViewController(withIdentifier: "SecondViewController") as! ListCafeteriasViewController
+                let vc = storyboard.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
             
                 //Llamamos a LocalRepository
                 vc.cafeterias = cafeterias.sorted{ (a, b) -> Bool in

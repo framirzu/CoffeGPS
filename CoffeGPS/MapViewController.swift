@@ -10,66 +10,70 @@ import UIKit
 
 class MapViewController: UIViewController, CLLocationManagerDelegate  {
 
+    @IBOutlet var mapView: MKMapView!
     
     @IBOutlet weak var tableView: UILabel!
 
     var locales: CafeteriasLocalesStruct?
-    
-    
-    @IBOutlet var mapView: MKMapView!
     
     let manager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.text = "\((locales?.latitude)!)  comes under the category \((locales?.longitude)!) "
-        
+        tableView.text = "\((locales?.latitude)!)  es la latitud  y \((locales?.longitude)!) es la longitud del local \((locales?.nombre)!)"
         // Imprime en la consola la latitud y longitud del local seleccionado
         // en la celda de LisCafeteriasViewController
-        print(((locales?.latitude)!) )
-        print(((locales?.longitude)!) )
-        
+        print(((tableView.text)!) )
         // Do any additional setup after loading the view.
     }
     
-    
+
     override func viewDidAppear(_ animated: Bool) {
         manager.desiredAccuracy = kCLLocationAccuracyBest // implica uso de bateria ya que activa GPS para + precision
         super.viewDidAppear(animated)
         manager.delegate = self
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
+              
     }
-    //esta funcion es llamada cuando el manager location es uopdate
+
+    //esta funcion es llamada cuando el manager location es update
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        if let location = locations.first {
+        if let mylocation = locations.first {
        
             manager.stopUpdatingLocation()
-            
-            render (location: location)
-            
+
+            render (location: mylocation)
         }
+      
     }
     func    render( location: CLLocation) {
         
-//        let coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude,
-//                                                        longitude: location.coordinate.longitude)
-                
+        // Latitud y longitud de la ubicacion del celular:
+//     let coordinate = CLLocationCoordinate2D(latitude:            //                                              location.coordinate.latitude,
+//                                           longitude: //                                                          location.coordinate.longitude)
+        // saca el valro de Latitud y Lontgitud de la cafeteria seleccionada en la celda.
+        let latitudCafeteria  = ((locales?.latitude)!)
+        let longitudCafeteria = ((locales?.longitude)!)
         
-        let coordinate = CLLocationCoordinate2D(latitude: ((locales?.latitude)!),
-                                                longitude: ((locales?.longitude)!))
         
-        let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+        let coordinate = CLLocationCoordinate2D(latitude: latitudCafeteria,
+                                                longitude: longitudCafeteria)
+        
+        let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
         
         let region = MKCoordinateRegion(center: coordinate,
                                         span: span)
-        mapView.setRegion(region,
-                          animated: true)
+        mapView.setRegion(region, animated: true)
+        
+    
+        let nameLocals = (locales?.nombre)!
         
         let pin = MKPointAnnotation()
         pin.coordinate = coordinate
+        pin.title = String(nameLocals)
         mapView.addAnnotation(pin)
         
     }

@@ -38,7 +38,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="didTapbutton" destination="BYZ-38-t0r" eventType="touchUpInside" id="9kJ-ah-EyJ"/>
+                                    <action selector="searchCafeButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="9kJ-ah-EyJ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPS Desactivado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKY-hP-cNy">
@@ -79,7 +79,7 @@
         <!--List Cafeterias View Controller-->
         <scene sceneID="Iqf-jF-cJq">
             <objects>
-                <viewController storyboardIdentifier="SecondViewController" id="xXe-wZ-U8Y" customClass="ListCafeteriasViewController" customModule="CoffeGPS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ListCafeteriasViewController" id="xXe-wZ-U8Y" customClass="ListCafeteriasViewController" customModule="CoffeGPS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o16-J7-Nc6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -114,7 +114,7 @@
                                                     </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fuZ-fI-ba2">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fuZ-fI-ba2">
                                                     <rect key="frame" x="160" y="90" width="224" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="224" id="NVa-PA-P78"/>
