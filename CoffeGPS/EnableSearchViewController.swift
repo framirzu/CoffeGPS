@@ -28,6 +28,7 @@ class EnableSearchViewController: UIViewController {
         
         if sender.isOn {
             LocationManager.shared.getLocation()
+            
             labelGPS.text = "GPS Activado";
             startToSearchButton.isEnabled = true
         }else{

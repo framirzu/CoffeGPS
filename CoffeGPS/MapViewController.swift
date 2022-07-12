@@ -58,9 +58,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate  {
         let latitudCafeteria  = ((locales?.latitude)!)
         let longitudCafeteria = ((locales?.longitude)!)
         
+        let coordinateUser = CLLocationCoordinate2D(latitude: location.coordinate.latitude,
+                                                    longitude: location.coordinate.longitude)
         
+        ///
         let coordinate = CLLocationCoordinate2D(latitude: latitudCafeteria,
                                                 longitude: longitudCafeteria)
+        
+        
+        
+        
         
         let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
         
@@ -71,11 +78,23 @@ class MapViewController: UIViewController, CLLocationManagerDelegate  {
         
         // nombre de local seleccionado
         let nameLocals = (locales?.nombre)!
-        
+        // muestra con un Pin en el Mapa la ubicacion del local
         let pin = MKPointAnnotation()
         pin.coordinate = coordinate
         pin.title = String(nameLocals)
         mapView.addAnnotation(pin)
+        ///////
+        ///
+        ///nombre del Usuario
+        let nameUser = "Yo"
+        
+        // muestra con un pin en el mapa la ubicacion del usuario
+        let pinUser = MKPointAnnotation()
+        pinUser.coordinate = coordinateUser
+        pinUser.title = String(nameUser)
+        mapView.addAnnotation(pinUser)
+        ///////
+        
         
     }
 }

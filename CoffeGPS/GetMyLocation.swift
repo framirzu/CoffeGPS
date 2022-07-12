@@ -27,6 +27,9 @@ class LocationManager: NSObject, CLLocationManagerDelegate{
         
         
         self.locationManager.requestWhenInUseAuthorization()
+        
+        print(self.locationManager.requestWhenInUseAuthorization())
+        
         self.locationManager.startUpdatingLocation()
         
     }
