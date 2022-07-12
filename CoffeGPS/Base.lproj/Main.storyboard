@@ -38,7 +38,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="searchCafeButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="9kJ-ah-EyJ"/>
+                                    <action selector="didTapbutton" destination="BYZ-38-t0r" eventType="touchUpInside" id="QIC-hY-9X9"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPS Desactivado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKY-hP-cNy">

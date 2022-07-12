@@ -68,7 +68,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate  {
                                         span: span)
         mapView.setRegion(region, animated: true)
         
-    
+        
+        // nombre de local seleccionado
         let nameLocals = (locales?.nombre)!
         
         let pin = MKPointAnnotation()
