@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo01" translatesAutoresizingMaskIntoConstraints="NO" id="2hX-TF-uKI">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CoffeGPSlogo" translatesAutoresizingMaskIntoConstraints="NO" id="2hX-TF-uKI">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cjg-zc-OyR">
@@ -38,6 +38,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.85490196080000003" green="0.52549019610000003" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="2hX-TF-uKI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1De-n8-zfX"/>
+                            <constraint firstItem="2hX-TF-uKI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="D0b-jV-iWz"/>
                             <constraint firstItem="Cjg-zc-OyR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="DWn-Tj-GDj"/>
                             <constraint firstItem="2hX-TF-uKI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="KLx-wd-ASM"/>
                             <constraint firstItem="2hX-TF-uKI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="MvM-am-Wyq"/>
@@ -48,7 +50,9 @@
                             <constraint firstItem="2hX-TF-uKI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aCp-xc-XTY"/>
                             <constraint firstAttribute="bottom" secondItem="2hX-TF-uKI" secondAttribute="bottom" id="aDU-O6-mri"/>
                             <constraint firstItem="2hX-TF-uKI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="al0-98-7c7"/>
+                            <constraint firstItem="2hX-TF-uKI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bMq-gM-Gyx"/>
                             <constraint firstItem="2hX-TF-uKI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iZW-uf-9xm"/>
+                            <constraint firstAttribute="bottom" secondItem="2hX-TF-uKI" secondAttribute="bottom" id="jOx-Hv-nAK"/>
                             <constraint firstItem="2hX-TF-uKI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uMp-yv-WEK"/>
                         </constraints>
                     </view>
@@ -236,7 +240,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="fondo01" width="1144" height="1056"/>
+        <image name="CoffeGPSlogo" width="566" height="852"/>
         <systemColor name="separatorColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
