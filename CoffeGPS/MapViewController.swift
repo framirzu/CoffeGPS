@@ -20,12 +20,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tableView.text = "\((locales?.latitude)!)  es la latitud  y \((locales?.longitude)!) es la longitud del local \((locales?.nombre)!)"
-        // Imprime en la consola la latitud y longitud del local seleccionado
-        // en la celda de LisCafeteriasViewController
-        print(((tableView.text)!) )
-        // Do any additional setup after loading the view.
+
     }
     
 
@@ -58,21 +53,20 @@ class MapViewController: UIViewController, CLLocationManagerDelegate  {
         let latitudCafeteria  = ((locales?.latitude)!)
         let longitudCafeteria = ((locales?.longitude)!)
         
-        let coordinateUser = CLLocationCoordinate2D(latitude: location.coordinate.latitude,
-                                                    longitude: location.coordinate.longitude)
+        // Coordenadas del Usuario:
+       
         
         ///
         let coordinate = CLLocationCoordinate2D(latitude: latitudCafeteria,
                                                 longitude: longitudCafeteria)
         
         
-        
-        
-        
+    
         let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
         
         let region = MKCoordinateRegion(center: coordinate,
                                         span: span)
+        
         mapView.setRegion(region, animated: true)
         
         
@@ -82,17 +76,24 @@ class MapViewController: UIViewController, CLLocationManagerDelegate  {
         let pin = MKPointAnnotation()
         pin.coordinate = coordinate
         pin.title = String(nameLocals)
+        tableView.text = "Distancia :" + String(format: "%0.2f", (locales?.distancia)!) + "km"
         mapView.addAnnotation(pin)
         ///////
         ///
         ///nombre del Usuario
-        let nameUser = "Yo"
+        //let nameUser = "Yo"
+        
+        
+        self.mapView.showsUserLocation = true
+        
+        
+    
         
         // muestra con un pin en el mapa la ubicacion del usuario
-        let pinUser = MKPointAnnotation()
-        pinUser.coordinate = coordinateUser
-        pinUser.title = String(nameUser)
-        mapView.addAnnotation(pinUser)
+//        let pinUser = MKPointAnnotation()
+//        pinUser.coordinate = coordinateUser
+//        pinUser.title = String(nameUser)
+//        mapView.addAnnotation(pinUser)
         ///////
         
         

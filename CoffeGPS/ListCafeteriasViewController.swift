@@ -58,10 +58,8 @@ extension ListCafeteriasViewController: UITableViewDataSource, UITableViewDelega
                     cell?.imageCell?.image = UIImage(data: data)
                 }
             }
-            
             task.resume()
         }
-        
         cell?.imageCell?.image = UIImage()
     
         return cell!
