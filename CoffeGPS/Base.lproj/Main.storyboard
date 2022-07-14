@@ -39,6 +39,8 @@
                         <color key="backgroundColor" red="0.85490196080000003" green="0.52549019610000003" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="2hX-TF-uKI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1De-n8-zfX"/>
+                            <constraint firstItem="2hX-TF-uKI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5RR-M6-xqp"/>
+                            <constraint firstItem="2hX-TF-uKI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="941-E7-tLq"/>
                             <constraint firstItem="2hX-TF-uKI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="D0b-jV-iWz"/>
                             <constraint firstItem="Cjg-zc-OyR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="DWn-Tj-GDj"/>
                             <constraint firstItem="2hX-TF-uKI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="KLx-wd-ASM"/>
@@ -53,7 +55,9 @@
                             <constraint firstItem="2hX-TF-uKI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bMq-gM-Gyx"/>
                             <constraint firstItem="2hX-TF-uKI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iZW-uf-9xm"/>
                             <constraint firstAttribute="bottom" secondItem="2hX-TF-uKI" secondAttribute="bottom" id="jOx-Hv-nAK"/>
+                            <constraint firstAttribute="bottom" secondItem="2hX-TF-uKI" secondAttribute="bottom" id="lnA-WN-H4w"/>
                             <constraint firstItem="2hX-TF-uKI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uMp-yv-WEK"/>
+                            <constraint firstItem="2hX-TF-uKI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xFj-UC-SxI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="f4o-xd-oRw"/>
@@ -160,10 +164,14 @@
                         <viewLayoutGuide key="safeArea" id="XTe-dm-l2h"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="eiH-Y7-ddO" firstAttribute="leading" secondItem="XTe-dm-l2h" secondAttribute="leading" id="13z-ZR-jBk"/>
                             <constraint firstItem="XTe-dm-l2h" firstAttribute="bottom" secondItem="eiH-Y7-ddO" secondAttribute="bottom" constant="20" id="9fU-rJ-8jh"/>
                             <constraint firstItem="XTe-dm-l2h" firstAttribute="trailing" secondItem="eiH-Y7-ddO" secondAttribute="trailing" id="AZL-WP-0oa"/>
+                            <constraint firstItem="eiH-Y7-ddO" firstAttribute="top" secondItem="XTe-dm-l2h" secondAttribute="top" constant="10" id="VJE-oZ-Po6"/>
                             <constraint firstItem="eiH-Y7-ddO" firstAttribute="top" secondItem="XTe-dm-l2h" secondAttribute="top" constant="10" id="YMp-th-T9W"/>
                             <constraint firstItem="eiH-Y7-ddO" firstAttribute="leading" secondItem="XTe-dm-l2h" secondAttribute="leading" id="YrI-R1-byW"/>
+                            <constraint firstItem="XTe-dm-l2h" firstAttribute="bottom" secondItem="eiH-Y7-ddO" secondAttribute="bottom" constant="20" id="u6G-v3-1fa"/>
+                            <constraint firstItem="eiH-Y7-ddO" firstAttribute="trailing" secondItem="XTe-dm-l2h" secondAttribute="trailing" id="y8o-u2-vnE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5Ik-fM-K7m"/>
@@ -187,9 +195,8 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="naP-Ka-2DI">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Distancia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLN-OR-aQm">
-                                <rect key="frame" x="20" y="754" width="374" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distancia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLN-OR-aQm">
+                                <rect key="frame" x="20" y="756" width="374" height="36"/>
                                 <color key="backgroundColor" systemColor="separatorColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
@@ -199,14 +206,22 @@
                         <viewLayoutGuide key="safeArea" id="UGF-L7-l1i"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="naP-Ka-2DI" firstAttribute="trailing" secondItem="UGF-L7-l1i" secondAttribute="trailing" id="0sT-N5-uL1"/>
+                            <constraint firstItem="UGF-L7-l1i" firstAttribute="bottom" secondItem="JLN-OR-aQm" secondAttribute="bottom" constant="16" id="9Mn-1G-hRH"/>
                             <constraint firstItem="naP-Ka-2DI" firstAttribute="top" secondItem="UGF-L7-l1i" secondAttribute="top" id="B2o-xX-RlU"/>
                             <constraint firstItem="naP-Ka-2DI" firstAttribute="leading" secondItem="UGF-L7-l1i" secondAttribute="leading" id="FwF-vM-gKy"/>
                             <constraint firstItem="UGF-L7-l1i" firstAttribute="trailing" secondItem="naP-Ka-2DI" secondAttribute="trailing" id="HHs-ZB-YvC"/>
+                            <constraint firstItem="naP-Ka-2DI" firstAttribute="bottom" secondItem="UGF-L7-l1i" secondAttribute="bottom" id="JSQ-gJ-bgR"/>
                             <constraint firstItem="UGF-L7-l1i" firstAttribute="trailing" secondItem="naP-Ka-2DI" secondAttribute="trailing" id="NlA-aJ-rNz"/>
                             <constraint firstItem="naP-Ka-2DI" firstAttribute="leading" secondItem="UGF-L7-l1i" secondAttribute="leading" id="R44-jw-B2U"/>
+                            <constraint firstItem="UGF-L7-l1i" firstAttribute="trailing" secondItem="JLN-OR-aQm" secondAttribute="trailing" constant="20" id="Tcz-Om-WyA"/>
                             <constraint firstItem="UGF-L7-l1i" firstAttribute="bottom" secondItem="naP-Ka-2DI" secondAttribute="bottom" id="X92-MB-Oml"/>
+                            <constraint firstItem="naP-Ka-2DI" firstAttribute="leading" secondItem="UGF-L7-l1i" secondAttribute="leading" id="cYG-6E-1nS"/>
+                            <constraint firstItem="naP-Ka-2DI" firstAttribute="top" secondItem="UGF-L7-l1i" secondAttribute="top" id="chF-ls-8yW"/>
                             <constraint firstItem="naP-Ka-2DI" firstAttribute="trailing" secondItem="UGF-L7-l1i" secondAttribute="trailing" id="ejw-Em-n9O"/>
                             <constraint firstItem="naP-Ka-2DI" firstAttribute="leading" secondItem="UGF-L7-l1i" secondAttribute="leading" id="ntg-5C-Wxn"/>
+                            <constraint firstItem="JLN-OR-aQm" firstAttribute="leading" secondItem="UGF-L7-l1i" secondAttribute="leading" constant="20" id="qaA-hL-M6N"/>
+                            <constraint firstItem="JLN-OR-aQm" firstAttribute="top" secondItem="UGF-L7-l1i" secondAttribute="top" constant="756" id="rUz-vU-Nx4"/>
                             <constraint firstItem="UGF-L7-l1i" firstAttribute="bottom" secondItem="naP-Ka-2DI" secondAttribute="bottom" id="wHM-CG-cCg"/>
                         </constraints>
                     </view>
