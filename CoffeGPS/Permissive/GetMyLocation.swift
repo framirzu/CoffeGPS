@@ -25,7 +25,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         
         self.locationManager.requestWhenInUseAuthorization()
         
-        print("get location")
+        //print("get location")
         
         self.locationManager.startUpdatingLocation()
         //seeAuthorizationStatus()
@@ -35,8 +35,8 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
 
             location = locations.first?.coordinate
-        print("location manager")
-
+        
+        //print("location manager"
         print("localizacion actual \(String(describing: location))")
         
         }

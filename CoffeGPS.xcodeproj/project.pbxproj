@@ -77,17 +77,57 @@
 				658335BD286807AA00B14292 /* LaunchScreen.storyboard */,
 				65DB3C98287F654C00BEFC7B /* Assets.xcassets */,
 				658335C0286807AA00B14292 /* Info.plist */,
+				65DB3CBA2882095100BEFC7B /* Views */,
+				65DB3CBB288209A100BEFC7B /* Model */,
+				65DB3CBC28820A4600BEFC7B /* Custom */,
+				65DB3CBE28820C5900BEFC7B /* Permissive */,
+				65DB3CBD28820AEA00BEFC7B /* Repository */,
+				655988F52877D870000D3C0F /* Cafeterias.json */,
+			);
+			path = CoffeGPS;
+			sourceTree = "<group>";
+		};
+		65DB3CBA2882095100BEFC7B /* Views */ = {
+			isa = PBXGroup;
+			children = (
 				658335B6286807A900B14292 /* EnableSearchViewController.swift */,
 				658335C62868D29300B14292 /* ListCafeteriasViewController.swift */,
 				655988F62877E438000D3C0F /* MapViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		65DB3CBB288209A100BEFC7B /* Model */ = {
+			isa = PBXGroup;
+			children = (
 				655988F12877D3ED000D3C0F /* Response.swift */,
 				655988ED2877CD96000D3C0F /* CafeteriasLocalesStruct.swift */,
-				655988EF2877D2A3000D3C0F /* RemoteRepository.swift */,
-				655988F52877D870000D3C0F /* Cafeterias.json */,
-				655988F32877D4D3000D3C0F /* GetMyLocation.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		65DB3CBC28820A4600BEFC7B /* Custom */ = {
+			isa = PBXGroup;
+			children = (
 				655988F828789907000D3C0F /* CustomTableViewCell.swift */,
 			);
-			path = CoffeGPS;
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		65DB3CBD28820AEA00BEFC7B /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				655988EF2877D2A3000D3C0F /* RemoteRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		65DB3CBE28820C5900BEFC7B /* Permissive */ = {
+			isa = PBXGroup;
+			children = (
+				655988F32877D4D3000D3C0F /* GetMyLocation.swift */,
+			);
+			path = Permissive;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
