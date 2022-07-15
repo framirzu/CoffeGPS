@@ -76,7 +76,7 @@ extension ListCafeteriasViewController: UITableViewDataSource, UITableViewDelega
                     cell?.imageCellView?.image = UIImage(data: data)
                 }
             }
-            task.resume()
+            task.resume() // inicializa la tarea
         }
         cell?.imageCellView?.image = UIImage()
     
@@ -89,9 +89,10 @@ extension ListCafeteriasViewController: UITableViewDataSource, UITableViewDelega
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //Cuando se activa un segue, pero antes de que ocurra la transición visual, el tiempo de ejecución del storyboard llama al método prepare(for:sender:) del view controller actual para que pueda pasar los datos necesarios al viewcontroller que está a punto de mostrarse.
+        
         if let destination = segue.destination as? MapViewController {
             destination.locales = cafeterias[(tableView.indexPathForSelectedRow?.row)!]
-
         }
     }
     

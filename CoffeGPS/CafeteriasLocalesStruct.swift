@@ -16,7 +16,7 @@ struct CafeteriasLocalesStruct:Codable {
     var distancia: Double{
         //compute property
         
-        guard let mylatitude = LocationManager.shared.location?.latitude else {return -12.07491157954171}
+        guard let mylatitude = LocationManager.shared.location?.latitude else       {return -12.07491157954171}
         
         guard let mylongitud = LocationManager.shared.location?.longitude else
         {return -77.03465858298718}
@@ -33,20 +33,3 @@ struct CafeteriasLocalesStruct:Codable {
         }
 }
 
-
-//// Antiguo codigo forzando desempaquetado de la propiedad location
-        
-//        let mylatitude = LocationManager.shared.location!.latitude
-//        //
-//        let mylongitud = LocationManager.shared.location!.longitude //
-//        // Mis Coordenadas latitud y longitud transformadas a Objeto con CLLocation
-//        let selfLocation = CLLocation(latitude: mylatitude, longitude: mylongitud)
-//        // Coordenas de latitud y longitud del local transformadas a a objeto CLLocation
-//        let location = CLLocation(latitude: latitude, longitude:longitude)
-//        //
-//        let distancia = selfLocation.distance(from: location)/1000
-//
-//        return distancia
-//
-//    }
-//}

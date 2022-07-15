@@ -29,15 +29,13 @@ class MapViewController: UIViewController, CLLocationManagerDelegate  {
         manager.delegate = self
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
-              
     }
-
     //esta funcion es llamada cuando el manager location es update
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        if let mylocation = locations.first {
+        if let mylocation = locations.first { //ya que el primer array de locations se encuentra mi ubicacion
        
-            manager.stopUpdatingLocation()
+            manager.stopUpdatingLocation() // Llamamos a este método siempre que su código ya no necesite recibir eventos relacionados con la ubicación.
 
             render (location: mylocation)
         }
@@ -46,7 +44,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate  {
     func    render( location: CLLocation) {
         
         // Latitud y longitud de la ubicacion de la cafeteria:
-
         guard let latitudCafeteria  = (locales?.latitude) else {return}
         guard let longitudCafeteria = (locales?.longitude) else {return}
         let coordinate = CLLocationCoordinate2D(latitude: latitudCafeteria,

@@ -12,7 +12,6 @@ class EnableSearchViewController: UIViewController {
     //creamos una variable en el ViewController, y la enlazamos con la vista de un elemento de la interfaz (UIButton)
     
     @IBOutlet var startToSearchButton: UIButton!
-    
     //
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,15 +33,13 @@ class EnableSearchViewController: UIViewController {
 //
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)//
                 
-              
-                
-                
                 //Cada vez que llama a este método, crea una nueva instancia del ViewController
                 
-                let vc = storyboard.instantiateViewController(withIdentifier: "ListCafeteriasViewController") as! ListCafeteriasViewController
+//                let vc = storyboard.instantiateViewController(withIdentifier: "ListCafeteriasViewController") as! ListCafeteriasViewController
             
-                //el whitidentifier o ID: El storyboard lo usa para ubicar los datos apropiados para su controlador de vista.
+                let vc = storyboard.instantiateViewController(withIdentifier: "ListCafeteriasViewController") as! ListCafeteriasViewController
                 
+                //el whitidentifier o ID: El storyboard lo usa para ubicar los datos apropiados para su controlador de vista.
                 
                 //Llamamos al ViewController y ordenamos los datos de menor a mayor
                 //segun la distancia
