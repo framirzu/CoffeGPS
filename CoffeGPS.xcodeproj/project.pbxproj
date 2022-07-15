@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		655988EE2877CD96000D3C0F /* CafeteriasLocalesStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655988ED2877CD96000D3C0F /* CafeteriasLocalesStruct.swift */; };
-		655988F02877D2A3000D3C0F /* LocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655988EF2877D2A3000D3C0F /* LocalRepository.swift */; };
+		655988F02877D2A3000D3C0F /* RemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655988EF2877D2A3000D3C0F /* RemoteRepository.swift */; };
 		655988F22877D3ED000D3C0F /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655988F12877D3ED000D3C0F /* Response.swift */; };
 		655988F42877D4D3000D3C0F /* GetMyLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655988F32877D4D3000D3C0F /* GetMyLocation.swift */; };
 		655988F72877E438000D3C0F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655988F62877E438000D3C0F /* MapViewController.swift */; };
@@ -24,7 +24,7 @@
 
 /* Begin PBXFileReference section */
 		655988ED2877CD96000D3C0F /* CafeteriasLocalesStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeteriasLocalesStruct.swift; sourceTree = "<group>"; };
-		655988EF2877D2A3000D3C0F /* LocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRepository.swift; sourceTree = "<group>"; };
+		655988EF2877D2A3000D3C0F /* RemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteRepository.swift; sourceTree = "<group>"; };
 		655988F12877D3ED000D3C0F /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		655988F32877D4D3000D3C0F /* GetMyLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMyLocation.swift; sourceTree = "<group>"; };
 		655988F52877D870000D3C0F /* Cafeterias.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Cafeterias.json; sourceTree = "<group>"; };
@@ -80,9 +80,9 @@
 				658335B6286807A900B14292 /* EnableSearchViewController.swift */,
 				658335C62868D29300B14292 /* ListCafeteriasViewController.swift */,
 				655988F62877E438000D3C0F /* MapViewController.swift */,
-				655988ED2877CD96000D3C0F /* CafeteriasLocalesStruct.swift */,
-				655988EF2877D2A3000D3C0F /* LocalRepository.swift */,
 				655988F12877D3ED000D3C0F /* Response.swift */,
+				655988ED2877CD96000D3C0F /* CafeteriasLocalesStruct.swift */,
+				655988EF2877D2A3000D3C0F /* RemoteRepository.swift */,
 				655988F52877D870000D3C0F /* Cafeterias.json */,
 				655988F32877D4D3000D3C0F /* GetMyLocation.swift */,
 				655988F828789907000D3C0F /* CustomTableViewCell.swift */,
@@ -163,7 +163,7 @@
 			files = (
 				655988F22877D3ED000D3C0F /* Response.swift in Sources */,
 				658335C72868D29300B14292 /* ListCafeteriasViewController.swift in Sources */,
-				655988F02877D2A3000D3C0F /* LocalRepository.swift in Sources */,
+				655988F02877D2A3000D3C0F /* RemoteRepository.swift in Sources */,
 				658335B7286807A900B14292 /* EnableSearchViewController.swift in Sources */,
 				655988F72877E438000D3C0F /* MapViewController.swift in Sources */,
 				655988F42877D4D3000D3C0F /* GetMyLocation.swift in Sources */,

@@ -151,11 +151,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="descriptioncell" destination="fuZ-fI-ba2" id="86g-Cz-1JN"/>
-                                            <outlet property="direccionesCell" destination="cyw-XX-Eoa" id="pfA-UC-SC0"/>
-                                            <outlet property="estrellasCell" destination="hwF-E3-siz" id="aDy-yd-uHU"/>
-                                            <outlet property="imageCell" destination="GfG-ug-Qaw" id="Q2Z-uk-xs5"/>
-                                            <outlet property="nameLocalCell" destination="xTT-CU-7kN" id="aIL-b2-B6B"/>
+                                            <outlet property="descriptioncellLabel" destination="fuZ-fI-ba2" id="86g-Cz-1JN"/>
+                                            <outlet property="direccionesCellLabel" destination="cyw-XX-Eoa" id="pfA-UC-SC0"/>
+                                            <outlet property="estrellasCellLabel" destination="hwF-E3-siz" id="aDy-yd-uHU"/>
+                                            <outlet property="imageCellView" destination="GfG-ug-Qaw" id="Q2Z-uk-xs5"/>
+                                            <outlet property="nameLocalCellLabel" destination="xTT-CU-7kN" id="aIL-b2-B6B"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -196,9 +196,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distancia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLN-OR-aQm">
-                                <rect key="frame" x="20" y="756" width="374" height="36"/>
+                                <rect key="frame" x="20" y="736" width="374" height="56"/>
                                 <color key="backgroundColor" systemColor="separatorColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -206,29 +206,29 @@
                         <viewLayoutGuide key="safeArea" id="UGF-L7-l1i"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="JLN-OR-aQm" firstAttribute="top" secondItem="UGF-L7-l1i" secondAttribute="top" constant="736" id="0XS-To-rs0"/>
                             <constraint firstItem="naP-Ka-2DI" firstAttribute="trailing" secondItem="UGF-L7-l1i" secondAttribute="trailing" id="0sT-N5-uL1"/>
-                            <constraint firstItem="UGF-L7-l1i" firstAttribute="bottom" secondItem="JLN-OR-aQm" secondAttribute="bottom" constant="16" id="9Mn-1G-hRH"/>
                             <constraint firstItem="naP-Ka-2DI" firstAttribute="top" secondItem="UGF-L7-l1i" secondAttribute="top" id="B2o-xX-RlU"/>
+                            <constraint firstItem="UGF-L7-l1i" firstAttribute="bottom" secondItem="JLN-OR-aQm" secondAttribute="bottom" constant="16" id="Dw8-JE-f4Z"/>
                             <constraint firstItem="naP-Ka-2DI" firstAttribute="leading" secondItem="UGF-L7-l1i" secondAttribute="leading" id="FwF-vM-gKy"/>
                             <constraint firstItem="UGF-L7-l1i" firstAttribute="trailing" secondItem="naP-Ka-2DI" secondAttribute="trailing" id="HHs-ZB-YvC"/>
                             <constraint firstItem="naP-Ka-2DI" firstAttribute="bottom" secondItem="UGF-L7-l1i" secondAttribute="bottom" id="JSQ-gJ-bgR"/>
+                            <constraint firstItem="JLN-OR-aQm" firstAttribute="leading" secondItem="UGF-L7-l1i" secondAttribute="leading" constant="20" id="MW2-0B-le6"/>
                             <constraint firstItem="UGF-L7-l1i" firstAttribute="trailing" secondItem="naP-Ka-2DI" secondAttribute="trailing" id="NlA-aJ-rNz"/>
                             <constraint firstItem="naP-Ka-2DI" firstAttribute="leading" secondItem="UGF-L7-l1i" secondAttribute="leading" id="R44-jw-B2U"/>
-                            <constraint firstItem="UGF-L7-l1i" firstAttribute="trailing" secondItem="JLN-OR-aQm" secondAttribute="trailing" constant="20" id="Tcz-Om-WyA"/>
                             <constraint firstItem="UGF-L7-l1i" firstAttribute="bottom" secondItem="naP-Ka-2DI" secondAttribute="bottom" id="X92-MB-Oml"/>
+                            <constraint firstItem="UGF-L7-l1i" firstAttribute="trailing" secondItem="JLN-OR-aQm" secondAttribute="trailing" constant="20" id="cGc-Yu-8cc"/>
                             <constraint firstItem="naP-Ka-2DI" firstAttribute="leading" secondItem="UGF-L7-l1i" secondAttribute="leading" id="cYG-6E-1nS"/>
                             <constraint firstItem="naP-Ka-2DI" firstAttribute="top" secondItem="UGF-L7-l1i" secondAttribute="top" id="chF-ls-8yW"/>
                             <constraint firstItem="naP-Ka-2DI" firstAttribute="trailing" secondItem="UGF-L7-l1i" secondAttribute="trailing" id="ejw-Em-n9O"/>
                             <constraint firstItem="naP-Ka-2DI" firstAttribute="leading" secondItem="UGF-L7-l1i" secondAttribute="leading" id="ntg-5C-Wxn"/>
-                            <constraint firstItem="JLN-OR-aQm" firstAttribute="leading" secondItem="UGF-L7-l1i" secondAttribute="leading" constant="20" id="qaA-hL-M6N"/>
-                            <constraint firstItem="JLN-OR-aQm" firstAttribute="top" secondItem="UGF-L7-l1i" secondAttribute="top" constant="756" id="rUz-vU-Nx4"/>
                             <constraint firstItem="UGF-L7-l1i" firstAttribute="bottom" secondItem="naP-Ka-2DI" secondAttribute="bottom" id="wHM-CG-cCg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nzh-EW-o9W"/>
                     <connections>
                         <outlet property="mapView" destination="naP-Ka-2DI" id="ArL-yX-hX9"/>
-                        <outlet property="tableView" destination="JLN-OR-aQm" id="XAw-Pa-H9U"/>
+                        <outlet property="tableViewLabel" destination="JLN-OR-aQm" id="XAw-Pa-H9U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BhC-fU-t5F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -9,11 +9,8 @@ import Foundation
 import UIKit
 import CoreLocation
 
-//Antes
-//class LocalRepository{
-class LocalRepository{
+class RemoteRepository{
     
-    //func getCafeterias(){
     func getCafeterias(block: @escaping ([CafeteriasLocalesStruct]) -> Void) {
         
         // de la linea 22 hasta la 24 es para conectarte al json
@@ -35,18 +32,11 @@ class LocalRepository{
                     //Coordenadas de mi ubicacion
                     
                   
-                    let mylatitude = LocationManager.shared.location!.latitude
-                    let mylongitud = LocationManager.shared.location!.longitude
+                    guard let mylatitude = LocationManager.shared.location?.latitude else{return }
+                    guard let mylongitud = LocationManager.shared.location?.longitude else {return}
 
                 // Mis Coordenadas latitud y longitud transformadas a Objeto con CLLocation
                     let selfLocation = CLLocation(latitude: mylatitude, longitude: mylongitud)
-
-                    // Formula para poner en objeto CLLocation las Coordenadas latitud y longitud
-                    //  los diferentes locales
-                    //let location = CLLocation(latitude: response.locales[0].latitude, longitude: response.locales[0].longitude)
-
-
-                   // let distance = selfLocation.distance(from: CLLocation(latitude: response.locales[0].latitude, longitude: response.locales[0].longitude))/1000
 
 //
                     let numberOfLocals = response.locales.count - 1

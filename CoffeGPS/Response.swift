@@ -9,6 +9,6 @@
 import Foundation
 
 struct Response: Codable{
-    
+
     let locales:[CafeteriasLocalesStruct]
 }

@@ -12,7 +12,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate  {
 
     @IBOutlet var mapView: MKMapView!
     
-    @IBOutlet weak var tableView: UILabel!
+    @IBOutlet weak var tableViewLabel: UILabel!
 
     var locales: CafeteriasLocalesStruct?
     
@@ -23,7 +23,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate  {
 
     }
     
-
     override func viewDidAppear(_ animated: Bool) {
         manager.desiredAccuracy = kCLLocationAccuracyBest // implica uso de bateria ya que activa GPS para + precision
         super.viewDidAppear(animated)
@@ -46,56 +45,36 @@ class MapViewController: UIViewController, CLLocationManagerDelegate  {
     }
     func    render( location: CLLocation) {
         
-        // Latitud y longitud de la ubicacion del celular:
-//     let coordinate = CLLocationCoordinate2D(latitude:            //                                              location.coordinate.latitude,
-//                                           longitude: //                                                          location.coordinate.longitude)
-        // saca el valro de Latitud y Lontgitud de la cafeteria seleccionada en la celda.
-        let latitudCafeteria  = ((locales?.latitude)!)
-        let longitudCafeteria = ((locales?.longitude)!)
-        
-        // Coordenadas del Usuario:
-       
-        
-        ///
+        // Latitud y longitud de la ubicacion de la cafeteria:
+
+        guard let latitudCafeteria  = (locales?.latitude) else {return}
+        guard let longitudCafeteria = (locales?.longitude) else {return}
         let coordinate = CLLocationCoordinate2D(latitude: latitudCafeteria,
                                                 longitude: longitudCafeteria)
-        
-        
-    
         let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
-        
         let region = MKCoordinateRegion(center: coordinate,
                                         span: span)
-        
+        // Muestra en una region del mapa
         mapView.setRegion(region, animated: true)
         
         
-        // nombre de local seleccionado
-        let nameLocals = (locales?.nombre)!
+        // nombre de local seleccionado guardo en la variable
+        guard let nameLocals = (locales?.nombre) else {return}
+        
         // muestra con un Pin en el Mapa la ubicacion del local
         let pin = MKPointAnnotation()
         pin.coordinate = coordinate
         pin.title = String(nameLocals)
-        tableView.text = "Distancia :" + String(format: "%0.2f", (locales?.distancia)!) + "km"
+        
+        tableViewLabel.text = "Distancia :" + String(format: "%0.2f", (locales?.distancia)!) + "km"
+        
+        // nos displaya la ubicacion del local en el mapa
         mapView.addAnnotation(pin)
         ///////
-        ///
-        ///nombre del Usuario
-        //let nameUser = "Yo"
-        
-        
+     
+        // nos Displaya la ubicación del usuario en el mapa
         self.mapView.showsUserLocation = true
-        
-        
     
-        
-        // muestra con un pin en el mapa la ubicacion del usuario
-//        let pinUser = MKPointAnnotation()
-//        pinUser.coordinate = coordinateUser
-//        pinUser.title = String(nameUser)
-//        mapView.addAnnotation(pinUser)
-        ///////
-        
         
     }
 }
